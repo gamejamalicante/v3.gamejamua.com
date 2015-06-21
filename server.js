@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 
-var config = require('./config.js');
+var config = require('./config.js'); //ARCHIVO DE CONFIGURACION GENERICO
 
 var port = process.env.PORT || 3000;
 

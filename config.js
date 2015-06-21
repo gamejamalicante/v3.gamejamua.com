@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
   database : 'excursionismo'
 });
 
-connection.connect(function(err) {
+/*connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
@@ -16,7 +16,7 @@ connection.connect(function(err) {
   console.log('connected as id ' + connection.threadId);
 });
 
-connection.end();
+connection.end();*/
 
 module.exports = {
 	mysql_connection : connection
