@@ -1,0 +1,23 @@
+{
+  "name": "GameJamUA",
+  "version": "0.0.1",
+  "description": "Web de la asociación GameJamAlicante",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://pabloppp@github.com/gamejamalicante/v3.gamejamua.com.git"
+  },
+  "author": "babbleberns, ennaxorl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gamejamalicante/v3.gamejamua.com/issues"
+  },
+  "homepage": "https://github.com/gamejamalicante/v3.gamejamua.com",
+  "dependencies": {
+    "express": "^4.13.0",
+    "mysql": "^2.7.0"
+  }
+}
