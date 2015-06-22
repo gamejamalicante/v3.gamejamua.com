@@ -12,6 +12,9 @@
 @secondary-text: #727272;
 @font-size: 1.4em;
 
+/* MEDIAS */
+@highdensity: ~'all screen and (max-width: 1300px)';
+
 html, body{
 	margin: 0;
 	padding: 0;
@@ -28,6 +31,9 @@ html, body{
 	padding: @padding;	
 	font-size: @font-size;
 	color: @primary-text;
+	@media @highdensity{
+	 	padding: @padding-small;
+	 }
 }
 
 .mybutton{
@@ -188,6 +194,10 @@ header{
 	z-index: 9;
 	left: 40%;
 	top: 10px;
+
+	 @media @highdensity{
+	 	display: none;
+	 }
 }
 
 .banner{
@@ -198,7 +208,7 @@ header{
 		background-position: top center;
 		background-size: 100%;
 		width: 100%;
-		height: 450px;
+		height: 480px;
 		text-indent: -9999px;
 		background-image: url(/static/assets/images/banner.jpg);
 		background-color: #f45050;
@@ -210,6 +220,9 @@ header{
 		text-align: center;
 		top: 150px;
 		padding: @padding;	
+		@media @highdensity{
+	 		padding: @padding-small;
+	 	}
 
 		h2{
 			color:white;
@@ -228,10 +241,9 @@ header{
 			
 			ul{
 				background-color: rgba(0,0,0,0.3);
-				padding: 10px;
-				padding-left: 30px;
+				padding: 20px;
 				border-radius: 2px;
-				width: 90%;
+				width: 100%;
 			}
 			li{
 				display: block;
@@ -248,7 +260,7 @@ header{
 			.poster{
 				margin-left: 100px;
 				max-width: 450px;
-				margin-top: -60px;
+				margin-top: -40px;
 				border: 9px solid black;
 			}
 		}
@@ -317,21 +329,17 @@ header{
 	.news{	margin-bottom: 50px; }
 }
 
-
-
-
-/* OTHER SIZES */
-
-@media all and (max-width:1300px){
-	.counter1{ display: none;}
-	.data-poster{display: none; }
-	#home{padding:@padding-small;}
-	.info{padding: 0;}
-	.twitterfeed{ display: none;}
-	
+.data-poster{
+	@media @highdensity{
+	 	display: none;
+	 }
 }
 
-@media all and (max-width:640){
-
+.twitterfeed{
+	@media @highdensity{
+	 	display: none;
+	 }
 }
+
+
 
