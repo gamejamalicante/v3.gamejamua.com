@@ -1,7 +1,14 @@
 gamejamua.controller('homeCtrl', function($scope){
 	
 	/* IS THERE A GAMEJAM? */
-	$scope.ingamejam = false;
+	$scope.ingamejam = true;
+
+	/* ESTÁ LOGUEADO? */
+	$scope.logged = false;
+
+	/* YA ESTÁ INSCRITO? */
+	$scope.inscrito = false;
+
 
 	/* GET STEPS */
 	var steps = [

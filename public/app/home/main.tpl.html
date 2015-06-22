@@ -1,27 +1,51 @@
 <div class="banner">
 	<div class="bg">		
 	</div>
-	<div class="info" layout="row">
+	<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO 
+		se muestra informacion general de la GAMEJAM-->
+	<div ng-show="!ingamejam" class="info-gamejam" layout="row">		
+		<div class="data-video" flex>
+			<iframe width="560" height="315" src="//www.youtube.com/embed/jnqgL1I85-I?rel=0" frameborder="0" allowfullscreen class="youtube"></iframe>
+		</div>
 		<div class="data" flex>
-			<h2>¡Hay una edición activa!</h2>
+			<h2>¿Hacer un videojuego en 48 horas?</h2>
+			<ul>
+				<li class="fa fa-caret-right"> ¿Sabías qué? ¡No es imposible!</li>
+				<li class="fa fa-caret-right"> Échale un vistazo a los juegos en nuestra web</li>
+				<li class="fa fa-caret-right"> Una GameJam es la mar de divertida, ¡no te pierdas ninguna!</li>
+				<li class="fa fa-caret-right"> <a class="white" href="http://compohub.net/">¡Encuentra otras game jams!</a> </li>
+			</ul>
+			<md-button class="mybutton inverse" aria-label="Ultima Edicion">Última Edición</md-button>
+			<md-button ng-show="!logged" class="mybutton inverse" aria-label="Registrate">¡Regístrate!</md-button>
+		</div>
+	</div>
+	<!-- EDICION ACTIVA
+		se muestra informacion general de la EDICION-->
+	<div ng-show="ingamejam" class="info-edicion" layout="row">
+		<div class="data" flex>
+			<h2 ng-show="!inscrito">¡Hay una edición activa!</h2>
+			<h2 ng-show="inscrito">¡Ya estás inscrito!</h2>
 			<ul>
 				<li class="fa fa-caret-right"> Monta tu grupo de hasta 4 personas</li>
 				<li class="fa fa-caret-right"> Decídete por un videojuego o un juego de mesa</li>
 				<li class="fa fa-caret-right"> Snacks y bebidas para el fin de semana</li>
 				<li class="fa fa-caret-right"> <a class="white" href="#">Leete las normas</a> </li>
 			</ul>
-			<md-button class="mybutton" aria-label="Mas info">Más información</md-button>
-			<md-button class="mybutton inverse" aria-label="Inscribete">¡Inscríbete!</md-button>
+			<md-button class="mybutton inverse" aria-label="Mas info">+ información</md-button>
+			<md-button ng-show="!inscrito" class="mybutton inverse" aria-label="Inscribete">¡Inscríbete!</md-button>
 		</div>
 		<div class="data-poster" flex>
-			<img class="poster" ng-src="static/assets/images/flyer.png" alt="poster de la edicion"/>
+			<img class="poster" ng-src="static/assets/images/mapa.jpg" alt="poster de la edicion"/>
 		</div>
 	</div>
 </div>
+
+
 <div id="home">
 	<div layout="column" layout-fill>
-		<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO-->
-		<h3>Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
+		<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO
+			se recorren la lista de juegos y se obtienen 4 randoms-->
+		<h3 ng-show="!ingamejam">Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
 		<div ng-show="!ingamejam" class="outgamejam" layout="row">
 			<md-card class="cards clickable" ng-repeat="game in games" flex>
 				<img ng-src="{{game.img}}" class="md-card-image" alt="{{game.title}}"/>
@@ -31,7 +55,8 @@
 			</md-card>		
 		</div>	
 
-		<!-- INSCRITO EN GAMEJAM -->
+		<!-- INSCRITO EN GAMEJAM 
+			se recorre la lista de 'pasos' sin realizar y se muestran-->
 		<md-tabs ng-show="ingamejam" class="ingamejam" md-selected="selectedStep" md-border-bottom md-autoselect>
 			<md-tab ng-repeat="step in steps" ng-disabled="step.disabled" label='{{step.title}}'>
 				<div class="info">
@@ -44,7 +69,7 @@
 	</div>
 
 	<div class="more-info" layout="row">
-		<!-- NOTICIAS -->
+		<!-- NOTICIAS  - serie de noticias obtenidas y mostradas -->
 		<div flex >
 			<div class="news" ng-repeat="new in news">
 				<h2>{{new.title}}</h2>
@@ -53,7 +78,7 @@
 				<a class="black" href="#">leer más</a>
 			</div>
 		</div>
-		<!-- TWITTER GAMEJAM-->
+		<!-- TWITTER WIDGET GAMEJAM-->
 		<div class="twitterfeed" flex="40">
 
 		</div>

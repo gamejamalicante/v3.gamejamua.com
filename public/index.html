@@ -26,8 +26,8 @@
 		<div class="counter1">CONTADOR</div>
 		<div class="right-header">
 
-			<md-button class="mybutton" aria-label="Ediciones"> <i class="fa fa-th-list"></i> Ediciones </md-button>
-			<md-button class="mybutton" ng-click="showAccess()" aria-label="Ediciones"> <i class="fa fa-lock" id="lockicon"></i> Acceso </md-button>
+			<md-button class="mybutton" aria-label="Ediciones"> <i class="fa fa-th-list"></i> <span class="hd-span">Ediciones </span></md-button>
+			<md-button class="mybutton" ng-click="showAccess()" aria-label="Ediciones"> <i class="fa fa-lock" id="lockicon"></i> <span class="hd-span">Acceso</span> </md-button>
 		</div>
 
 		<div class="subheader" id="access">
@@ -41,6 +41,45 @@
 	</header>
 
 	<div ui-view></div>
+
+	<footer>
+		<div class="info-footer" layout="row">		
+			<div flex>
+				<h2>SOBRE NOSOTROS</h2>
+				<p>Somos una asociación sin ánimo de lucro dedicada a la organización y promoción
+				de eventos relacionados con el desarrollo de videojeugos, especialmente de 'game jams'. ¡Así
+				de simple!</p>
+				<p><i class="fa fa-envelope" style="padding-right:10px;"></i> info@gamejamua.com</p>
+				<a href="https://twitter.com/GameJamUA" target="_blank"><i class="fa fa-twitter" style="padding-right:10px; padding-bottom:20px;"></i> @gamejamua</a>
+				<a href="https://www.facebook.com/GameJamUa" target="_blank"><i class="fa fa-facebook-official" style="padding-left: 50px; padding-right:10px; padding-bottom:10px;"></i> gamejamua</a>
+
+				<!-- COLOCAR AQUI A MANO LOS PATROCINADORES -->
+				<div class="patrocinadores" layout="row">
+					<a href="http://www.socialpoint.es/" target="_blank" flex><img class="round" ng-src="static/assets/images/logos/socialpoint.jpg" alt="social point logo"/></a>
+					<a href="http://www.lemonteam.com/" target="_blank" flex><img class="round" ng-src="static/assets/images/logos/lemonteam.png" alt="lemon team logo"/></a>
+					<a href="http://www.fosfore-studios.com/" target="_blank" flex><img class="round" ng-src="static/assets/images/logos/fosfore.jpg" alt="fosfore logo"/></a>
+				</div>
+
+				<div class="menu">
+					<a class="a-menu" href="">Portada</a>
+					<a class="a-menu" href="">Juegos</a>
+					<a class="a-menu" href="">Ediciones</a>
+
+					<a class="a-menu" ng-show="logged" href="">Perfil</a>
+					<a class="a-menu" ng-show="!logged" href="">Registro</a>
+				</div>
+			</div>
+			<div class="contacto" flex="45">
+				<h2>CONTÁCTANOS</h2>
+				<p>Si tienes algunda duda o te gustaría colaborar de alguna forma, puedes usar el siguiente formulario:</p>
+				<form class="right-header form">
+					<input type="text" placeholder="Tu nombre..."><br>
+					<textarea rows="5" cols="30" placeholder="Sé bueno!"></textarea>
+					<md-button class="mybutton" aria-label="Enviar"><i class="fa fa-paper-plane"></i></md-button>	
+				</form>
+			</div>
+		</div>
+	</footer>
 
 	<!-- DEPENDENCIES -->
 	<script src="static/bower/angular/angular.min.js"></script>
