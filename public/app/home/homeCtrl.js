@@ -1,3 +1,3 @@
-gamejamua.controller('homeCtrl' function($scope){
-
+gamejamua.controller('homeCtrl', function($scope){
+	
 });

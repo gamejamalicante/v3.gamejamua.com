@@ -1,3 +1,3 @@
-gamejamua.controller('headerCtrl' function($scope){
+gamejamua.controller('headerCtrl', function($scope){
 
 });

@@ -2,7 +2,7 @@
 <html lang="es" ng-app="gamejamua">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="description" content="GameJam Alicante es una asociación dedicada en exclusiva a organizar eventos relacionados con el desarrollo de videojuegos">
     <meta name="author" content="GameJam Alicante">
 
@@ -19,7 +19,11 @@
 	<script src="bower/less/dist/less.min.js" type="text/javascript"></script>
 </head>
 <body>
-	<!--<div ng-include="'header.tpl.html'"></div>-->
+	<!-- SHARED HEADER -->
+	<header>
+		
+	</header>
+
 	<div ui-view></div>
 
 	<!-- DEPENDENCIES -->
@@ -33,6 +37,7 @@
 	<!-- CONTROLLERS -->
 	<script src="app/app.js"></script>
 	<script src="app/home/homeCtrl.js"></script>
+	<script src="headerCtrl.js"></script>
 	
 </body>
 </html>
