@@ -1,4 +1,4 @@
-var gamejamua = angular.module('gamejamua', ['ui.router']);
+var gamejamua = angular.module('gamejamua', ['ui.router', 'ngMaterial']);
 
 gamejamua.config(function($stateProvider, $urlRouterProvider, $locationProvider){
 

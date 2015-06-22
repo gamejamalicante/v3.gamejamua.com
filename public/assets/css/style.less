@@ -1,0 +1,337 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
+
+@background-color: rgb(235, 230, 235);
+@main-font: 'Lato', sans-serif;
+
+@special-button: #106cc8;
+
+/* GENERAL SETTINGS */
+@padding: 10px 190px 25px 190px;
+@padding-small: 10px 35px 25px 35px;
+@primary-text: #212121;
+@secondary-text: #727272;
+@font-size: 1.4em;
+
+html, body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+
+	background-color: @background-color;
+	font-family: @main-font;
+
+}
+
+#home{
+	padding: @padding;	
+	font-size: @font-size;
+	color: @primary-text;
+}
+
+.mybutton{
+	background: none;
+	opacity: 0.6;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-size: 1.3em;
+	color: white;
+	border: 3px solid white;
+	border-radius: 5px;	
+	padding: 0px 20px 1px 20px;
+	outline: none;
+
+	&:hover, &:active{
+		opacity: 1;
+	}
+}
+
+.mybutton.inverse{
+	background: white;
+	color: #333;
+}
+
+.mybutton.special{
+	border: 3px solid @special-button;
+	color: #333;
+	opacity: 0.7;
+}
+
+a{
+	opacity: 0.7;
+	text-decoration: none;	
+	transition: all 0.3s;
+	&:hover{
+		opacity: 1;
+	}
+}
+
+.white{
+	color: white;
+	border-bottom: 1px dashed white; 
+}
+
+.black{
+	color: @primary-text;
+	border-bottom: 1px dashed @primary-text;
+}
+
+.logo{
+	margin: 0;
+	margin-left: 30px;
+	margin-top: 2px;
+	padding: 0;
+	display: inline-block;
+	width: 220px;
+	color: white;
+	opacity: 0.8;
+	transition: all 0.3s;
+	cursor: pointer;
+	line-height: 60px;
+	vertical-align: middle;
+	&:hover{
+		opacity: 1;
+	}
+}
+
+header{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+
+	background-color: rgba(0,0,0,0.7);
+
+	.right-header{
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		padding: 2px;
+		height: 60px;
+		vertical-align: middle;
+	}
+
+	.subheader.visible{
+			opacity: 1;
+			min-height: 75px;	
+		}
+
+	.subheader{
+		width: 100%;
+		min-height: 0px;
+		height: 0;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background-color: rgba(0,0,0,0.7);
+		transition: all 0.3s;
+		overflow: hidden;
+		opacity: 0;
+
+		span{
+			color: white;
+			font-size: 1.3em;
+			line-height: 100%;
+			vertical-align: middle;		
+		}
+
+		a{
+			line-height: 100%;
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 1.4em;
+			color: white;
+			letter-spacing: 1px;
+			font-weight: 400;
+			border-bottom: 1px dashed white;
+			cursor: pointer;
+			text-decoration: none;
+			opacity: 0.8;
+			transition: all 0.3s;
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+		input{
+			font-size: 1.1em;
+			min-height: 40px;
+			padding: 10px;
+			box-sizing: border-box;
+			border: none;
+			vertical-align: middle;
+			border-radius: 5px;
+			background-color: rgba(255,255,255,0.9);
+			margin-left: 10px;
+			outline: none;
+		}
+		.mybutton{
+			margin-top:12px;
+		}
+		input::-webkit-input-placeholder {
+			color: black;
+			opacity: 0.5;
+		}
+	}
+}
+
+.counter1{
+	font-size: 1.7em;
+	color:white;
+	position: absolute;
+	z-index: 9;
+	left: 40%;
+	top: 10px;
+}
+
+.banner{
+	
+	.bg{
+		position: relative;
+		background-attachment: fixed;
+		background-position: top center;
+		background-size: 100%;
+		width: 100%;
+		height: 450px;
+		text-indent: -9999px;
+		background-image: url(/static/assets/images/banner.jpg);
+		background-color: #f45050;
+	}
+	.info{
+		position: absolute;
+		width: 100%;
+		z-index: 9;
+		text-align: center;
+		top: 150px;
+		padding: @padding;	
+
+		h2{
+			color:white;
+			position: absolute;				
+			z-index: 9;
+			text-align: left;
+			top: -70px;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		div{
+			text-align: left;
+			position: relative;
+			
+			ul{
+				background-color: rgba(0,0,0,0.3);
+				padding: 10px;
+				padding-left: 30px;
+				border-radius: 2px;
+				width: 90%;
+			}
+			li{
+				display: block;
+				color: white;
+				margin-bottom: 15px;
+				font-size: 1.4em;
+			}			
+			.mybutton{
+				width: 45%;
+				font-size: 1.5em;
+				opacity: 0.9;
+			}
+
+			.poster{
+				margin-left: 100px;
+				max-width: 450px;
+				margin-top: -60px;
+				border: 9px solid black;
+			}
+		}
+		
+	}
+}
+
+.ingamejam{
+	background-color: #f5f5f5;
+	min-height: 200px;
+
+	.info{
+		padding:5px; 
+		display: inline-block;		
+		img{
+			float: left;				
+			max-width: 25%;
+		}
+
+		div{
+			float: right;
+			width: 70%;
+			padding: 15px;
+		}
+		.mybutton{
+			font-size: 1em;
+			margin-left: 45px; 
+		}
+	}
+}
+.outgamejam{
+	.cards{ 
+		width: 25%;
+		transition: all 0.3s;
+		opacity: 0.8;
+		&:hover{
+			cursor: pointer;
+			opacity: 1;
+		}
+	}
+
+	h2{
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.more-info{
+	padding-top: 30px;
+	span{
+		font-size: 0.75em;
+		position: absolute;
+		margin-top: -15px;
+	}
+	
+	p{
+		padding-top: 10px;
+		overflow:hidden;
+	   	text-overflow: ellipsis; 
+	   	display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		height: 10*250*3; /* Fallback for non-webkit */
+	   
+	}
+	.news{	margin-bottom: 50px; }
+}
+
+
+
+
+/* OTHER SIZES */
+
+@media all and (max-width:1300px){
+	.counter1{ display: none;}
+	.data-poster{display: none; }
+	#home{padding:@padding-small;}
+	.info{padding: 0;}
+	.twitterfeed{ display: none;}
+	
+}
+
+@media all and (max-width:640){
+
+}
+

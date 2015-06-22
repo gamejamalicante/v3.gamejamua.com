@@ -1,2 +1,60 @@
-<h3>{{viviendas}}</h3>
-dasdsa
+<div class="banner">
+	<div class="bg">		
+	</div>
+	<div class="info" layout="row">
+		<div class="data" flex>
+			<h2>¡Hay una edición activa!</h2>
+			<ul>
+				<li class="fa fa-caret-right"> Monta tu grupo de hasta 4 personas</li>
+				<li class="fa fa-caret-right"> Decídete por un videojuego o un juego de mesa</li>
+				<li class="fa fa-caret-right"> Snacks y bebidas para el fin de semana</li>
+				<li class="fa fa-caret-right"> <a class="white" href="#">Leete las normas</a> </li>
+			</ul>
+			<md-button class="mybutton" aria-label="Mas info">Más información</md-button>
+			<md-button class="mybutton inverse" aria-label="Inscribete">¡Inscríbete!</md-button>
+		</div>
+		<div class="data-poster" flex>
+			<img class="poster" ng-src="static/assets/images/flyer.png" alt="poster de la edicion"/>
+		</div>
+	</div>
+</div>
+<div id="home">
+	<div layout="column" layout-fill>
+		<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO-->
+		<h3>Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
+		<div ng-show="!ingamejam" class="outgamejam" ng-repeat="game in games">
+			<md-card class="cards clickable">
+				<img ng-src="{{game.img}}" class="md-card-image" alt="{{game.title}}"/>
+				<md-card-content>
+					<h2 class="md-title"> {{game.title}} </h2>
+				</md-card-content>
+			</md-card>		
+		</div>	
+
+		<!-- INSCRITO EN GAMEJAM -->
+		<md-tabs ng-show="ingamejam" class="ingamejam" md-selected="selectedStep" md-border-bottom md-autoselect>
+			<md-tab ng-repeat="step in steps" ng-disabled="step.disabled" label='{{step.title}}'>
+				<div class="info">
+					<img ng-src="{{step.img}}" alt="poster de la edicion"/>
+					<div ng-bind="step.content"></div>
+					<md-button class="mybutton special" aria-label="Mas info">{{step.title}}</md-button>
+				</div>
+			</md-tab>
+		</md-tabs>
+	</div>
+
+	<div class="more-info" layout="row">
+		<!-- NOTICIAS -->
+		<div flex >
+			<div class="news" ng-repeat="new in news">
+				<h2>{{new.title}}</h2>
+				<span>{{new.date}}</span>
+				<div class="bubble"><p>{{new.text}}</p></div>
+			</div>
+		</div>
+		<!-- TWITTER GAMEJAM-->
+		<div class="twitterfeed" flex="40">
+
+		</div>
+	</div>
+</div>
