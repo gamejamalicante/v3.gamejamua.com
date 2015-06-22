@@ -37,6 +37,11 @@ rest.get('/', function (req, res) {
 });
 */
 
+app.get('/',function(req, res){
+ res.sendFile('index.html', { root: __dirname+"/public" });
+});
+
+
 //INICIAMOS EL SERVIDOR
 http.listen(port, function(){
   console.log('listening on *:'+port);
