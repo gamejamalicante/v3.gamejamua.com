@@ -22,8 +22,8 @@
 	<div layout="column" layout-fill>
 		<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO-->
 		<h3>Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
-		<div ng-show="!ingamejam" class="outgamejam" ng-repeat="game in games">
-			<md-card class="cards clickable">
+		<div ng-show="!ingamejam" class="outgamejam" layout="row">
+			<md-card class="cards clickable" ng-repeat="game in games" flex>
 				<img ng-src="{{game.img}}" class="md-card-image" alt="{{game.title}}"/>
 				<md-card-content>
 					<h2 class="md-title"> {{game.title}} </h2>

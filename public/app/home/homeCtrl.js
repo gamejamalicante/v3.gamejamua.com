@@ -1,7 +1,7 @@
 gamejamua.controller('homeCtrl', function($scope){
 	
 	/* IS THERE A GAMEJAM? */
-	$scope.ingamejam = true;
+	$scope.ingamejam = false;
 
 	/* GET STEPS */
 	var steps = [
