@@ -23,6 +23,7 @@
     "font-awesome-animation": "~0.0.6",
     "animate.css": "~3.3.0",
     "angular-animate": "~1.4.1",
-    "less": "~2.5.1"
+    "less": "~2.5.1",
+    "angular-ui-router": "~0.2.15"
   }
 }
