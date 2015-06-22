@@ -7,37 +7,19 @@ var config = require('./config.js'); //ARCHIVO DE CONFIGURACION GENERICO
 var port = process.env.PORT || 3000;
 
 //DEFINE LA CARPETA DESDE LA CUAL SE SIRVEN ARCHIVOS ESTATICOS (CSS, JS, IMGS, etc...)
-app.use(express.static('public')); 
+var static = express();
+app.use('/static', static);
+static.use(express.static('public')); 
 
-//SUBROUTE_REST
-var rest = express();
+//DEFINIMOS LAS SUBRUTAS ALTERNATIVAS
+var rest = express();  //API REST
 app.use('/rest', rest);
 
-//CARGAMOS LAS RUTAS
+//CARGAMOS LAS RUTAS FIJAS
 require('./routes/rest/users.js')(express, rest);
 
-/*
-rest.get('/', function (req, res) {
-  res.send('REST ROUTE');
-});
-*/
-
-/*app.get('/query', function(req, res){
-	var sql = config.mysql_connection;
-
-	sql.query('SELECT * FROM COMENTARIO', function(err, rows) {
-		if(err) res.send("error de conexion");
-  		// connected! (unless `err` is set)
-  		console.log(rows);
-  		var resultado = JSON.stringify(rows);
-  		resultado = unescape(resultado);
-  		res.send(resultado);
-	});
-
-});
-*/
-
-app.get('/',function(req, res){
+//LA RUTA / SIRVE PARA ANGULARJS, TODAS LAS RUTAS DE ANGULAR SE DEFINEN EN public/app/app.js LAS ALTERNATIVAS SE DEFINEN ARRIBA
+app.get('/*',function(req, res){
  res.sendFile('index.html', { root: __dirname+"/public" });
 });
 
