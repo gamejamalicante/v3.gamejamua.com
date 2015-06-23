@@ -5,7 +5,7 @@
 		se muestra informacion general de la GAMEJAM-->
 	<div ng-show="!ingamejam" class="info-gamejam" layout="row">		
 		<div class="data-video" flex>
-			<iframe width="560" height="315" src="//www.youtube.com/embed/jnqgL1I85-I?rel=0" frameborder="0" allowfullscreen class="youtube"></iframe>
+			<iframe src="//www.youtube.com/embed/jnqgL1I85-I?rel=0" frameborder="0" allowfullscreen class="youtube video"></iframe>
 		</div>
 		<div class="data" flex>
 			<h2>¿Hacer un videojuego en 48 horas?</h2>
@@ -80,7 +80,22 @@
 		</div>
 		<!-- TWITTER WIDGET GAMEJAM-->
 		<div class="twitterfeed" flex="40">
-
+			<h3>Twittea con el hashtag #GameJamUA</h3>
+			<div class="inside">
+				<a class="twitter-timeline" href="https://twitter.com/hashtag/GameJamUA" data-widget-id="613117035736891392">Tweets sobre #GameJamUA</a>
+				<script>
+					!function(d,s,id){
+						var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+						if(!d.getElementById(id)){
+							js=d.createElement(s);
+							js.id=id;
+							js.src=p+"://platform.twitter.com/widgets.js";
+							fjs.parentNode.insertBefore(js,fjs);
+						}
+					}
+					(document,"script","twitter-wjs");
+				</script>
+			</div>
 		</div>
 	</div>
 </div>

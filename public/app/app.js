@@ -2,6 +2,8 @@ var gamejamua = angular.module('gamejamua', ['ui.router', 'ngMaterial']);
 
 gamejamua.config(function($stateProvider, $urlRouterProvider, $locationProvider){
 
+	
+
 	$locationProvider.html5Mode({
 		enabled: true,
 		requireBase: false
@@ -17,5 +19,8 @@ gamejamua.config(function($stateProvider, $urlRouterProvider, $locationProvider)
 	      templateUrl: static_path+"/home/main.tpl.html",
 	      controller: 'homeCtrl'
 	    });
+
+
+
 
 });

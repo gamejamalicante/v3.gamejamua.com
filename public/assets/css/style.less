@@ -385,6 +385,17 @@ header{
 
 		.data-video{
 			margin-top: -50px;
+			.video{
+				position: absolute;
+				height: 100%;
+				border: none;
+				width: 80%;
+				
+			}
+
+			@media all and (max-width:900px){
+	 			display: none;
+			}
 		}
 
 		h2{
@@ -407,6 +418,9 @@ header{
 				padding: 20px;
 				border-radius: 2px;
 				width: 100%;
+				@media all and (max-width:1200px){
+				 	padding: 0px;
+				}
 				@media all and (max-width:900px){
 				 	padding: 0px;
 				}
@@ -550,11 +564,18 @@ header{
 }
 
 .twitterfeed{
+
+	.inside{
+		width: 95%;
+	}
 	@media all and (max-width:850px){
 	 	display: none;
 	 }
 }
 
+.bubble{
+	padding-right: 15px;
+}
 
 
 

@@ -1,14 +1,4 @@
-gamejamua.controller('homeCtrl', function($scope){
-	
-	/* IS THERE A GAMEJAM? */
-	$scope.ingamejam = true;
-
-	/* ESTÁ LOGUEADO? */
-	$scope.logged = false;
-
-	/* YA ESTÁ INSCRITO? */
-	$scope.inscrito = false;
-
+gamejamua.controller('homeCtrl', function($scope, $timeout){
 
 	/* GET STEPS */
 	var steps = [
@@ -85,5 +75,9 @@ gamejamua.controller('homeCtrl', function($scope){
 
 		}];
 	$scope.news = news;
+
+	$timeout(function() {
+	 $.ajax({ url: 'http://platform.twitter.com/widgets.js', dataType: 'script', cache:true});
+	}, 1000);
 
 });
