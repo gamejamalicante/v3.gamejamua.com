@@ -76,8 +76,6 @@ gamejamua.controller('homeCtrl', function($scope, $timeout){
 		}];
 	$scope.news = news;
 
-	$timeout(function() {
-	 $.ajax({ url: 'http://platform.twitter.com/widgets.js', dataType: 'script', cache:true});
-	}, 1000);
+	
 
 });

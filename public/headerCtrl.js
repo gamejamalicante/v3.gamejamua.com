@@ -1,10 +1,10 @@
 gamejamua.controller('headerCtrl', function($scope){	
 
 	/* IS THERE A GAMEJAM? */
-	$scope.ingamejam = true;
+	$scope.ingamejam = false;
 
 	/* ESTÁ LOGUEADO? */
-	$scope.logged = false;
+	$scope.logged = true;
 
 	/* YA ESTÁ INSCRITO? */
 	$scope.inscrito = false;

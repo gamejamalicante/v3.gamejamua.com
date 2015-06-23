@@ -23,8 +23,13 @@
 	<header ng-controller="headerCtrl">
 		<div><img class="logo" ng-src="static/assets/images/newlogo.png" alt="web logo"/><!-- CAMBIAR POR NUEVO LOGO --></div>
 
-		<div class="counter1">CONTADOR</div>
+		<div ng-show="ingamejam" class="counter1">CONTADOR</div>
 		<div class="right-header"> <!-- BOTONES DISPONIBLES -->
+			<span class="hellouser">¡Hola <a href="">Roxanne</a>!</span>  <!-- METER USU INFO -->
+			<md-button class="mybutton profile" aria-label="Perfil"> 
+				<i class="fa fa-user"></i>
+			</md-button>
+
 			<md-button class="mybutton" aria-label="Ediciones"> 
 				<i class="fa fa-th-list"></i> 
 				<span class="hd-span">Ediciones </span>
@@ -34,10 +39,10 @@
 				<i class="fa fa-lock" id="lockicon"></i> 
 				<span class="hd-span">Acceso</span> 
 			</md-button>
-
-			<md-button ng-show="logged" class="mybutton" ng-click="" aria-label="Log out"> 
-				<i class="fa fa-lock"></i> 
-				<span class="hd-span">Desconectarse</span> 
+				
+			<md-button ng-show="logged" class="mybutton alert" ng-click="" aria-label="Log out"> 
+				<i class="fa fa-sign-out"></i>
+				<span class="hd-span">Log out</span> 
 			</md-button>
 		</div>
 
