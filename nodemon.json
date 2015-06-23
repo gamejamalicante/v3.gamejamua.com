@@ -1,5 +1,6 @@
 {
   "events": {
     "restart": "lessc public/assets/css/style.less > public/assets/css/style.css"
-  }
+  },
+  "ext": "js json html less"
 }

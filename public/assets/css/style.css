@@ -160,6 +160,17 @@ footer {
   color: #333;
   opacity: 0.7;
 }
+.mybutton.alert {
+  background: #ff1f17;
+}
+.mybutton.profile {
+  display: none;
+}
+@media all and (max-width: 640px) {
+  .mybutton.profile {
+    display: inline-block;
+  }
+}
 a {
   opacity: 0.7;
   text-decoration: none;
@@ -220,6 +231,20 @@ header {
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
 }
+@media all and (max-width: 800px) {
+  header .mybutton {
+    padding: 0px;
+    min-width: 120px;
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 640px) {
+  header .mybutton {
+    padding: 0px;
+    min-width: 60px;
+    margin: 4px;
+  }
+}
 header .right-header {
   display: inline-block;
   position: absolute;
@@ -228,6 +253,20 @@ header .right-header {
   padding: 2px;
   height: 60px;
   vertical-align: middle;
+}
+header .right-header .hellouser {
+  color: white;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+@media all and (max-width: 640px) {
+  header .right-header .hellouser {
+    display: none;
+  }
+}
+header .right-header .hellouser a {
+  border-bottom: 1px dashed white;
+  color: white;
 }
 header .subheader.visible {
   opacity: 1;
@@ -349,7 +388,7 @@ header .subheader input::-webkit-input-placeholder {
 }
 @media all and (max-width: 400px) {
   .banner .bg {
-    height: 620px;
+    height: 650px;
   }
 }
 .banner .info-edicion,
@@ -395,6 +434,13 @@ header .subheader input::-webkit-input-placeholder {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+@media all and (max-width: 640px) {
+  .banner .info-edicion h2,
+  .banner .info-gamejam h2 {
+    text-align: center;
+    font-size: 1.3em;
+  }
+}
 .banner .info-edicion div,
 .banner .info-gamejam div {
   text-align: left;
@@ -437,6 +483,12 @@ header .subheader input::-webkit-input-placeholder {
   width: 45%;
   font-size: 1.5em;
   opacity: 0.9;
+}
+@media all and (max-width: 640px) {
+  .banner .info-edicion div .mybutton,
+  .banner .info-gamejam div .mybutton {
+    font-size: 1.3em;
+  }
 }
 @media all and (max-width: 400px) {
   .banner .info-edicion div .mybutton,
