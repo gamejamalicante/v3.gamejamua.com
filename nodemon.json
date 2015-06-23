@@ -1,0 +1,5 @@
+{
+  "events": {
+    "restart": "lessc public/assets/css/style.less > public/assets/css/style.css"
+  }
+}
