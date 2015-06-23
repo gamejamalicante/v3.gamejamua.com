@@ -46,8 +46,8 @@
 		<!-- NO EDICION ACTIVA O TODAVIA NO INSCRITO
 			se recorren la lista de juegos y se obtienen 4 randoms-->
 		<h3 ng-show="!ingamejam">Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
-		<div ng-show="!ingamejam" class="outgamejam" layout="row">
-			<md-card class="cards clickable" ng-repeat="game in games" flex>
+		<div ng-show="!ingamejam" class="outgamejam" layout="row" layout-sm="column" layout-md="column">
+			<md-card class="cards clickable" ng-repeat="game in games" flex-lg>
 				<img ng-src="{{game.img}}" class="md-card-image" alt="{{game.title}}"/>
 				<md-card-content>
 					<h2 class="md-title"> {{game.title}} </h2>
