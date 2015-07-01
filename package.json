@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gamejamalicante/v3.gamejamua.com",
   "dependencies": {
+    "compression": "^1.5.0",
     "express": "^4.13.0",
     "mysql": "^2.7.0"
   }

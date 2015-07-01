@@ -1,6 +1,9 @@
 var express = require('express');
+var compression = require('compression'); //COMPRESS DATA FOR FASTER LOADING
 var app = express();
 var http = require('http').Server(app);
+
+app.use(compression()); //COMPRIME TODAS LAS PETICIONES
 
 var config = require('./config.js'); //ARCHIVO DE CONFIGURACION GENERICO
 
