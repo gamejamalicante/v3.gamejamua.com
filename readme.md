@@ -23,6 +23,7 @@ It needs: [npm](https://www.npmjs.com/) |
 -  [l-lin/font-awesome-animation](https://github.com/l-lin/font-awesome-animation): set of animations for fontawesome icons.
 -  [daneden/animate.css](https://github.com/daneden/animate.css): bunch of cool, fun, and cross-browser animations for the project.
 -  [less/less.js](https://github.com/less/less.js): dynamic stylesheet language.
+-  [hiddentao/squel.js](https://hiddentao.github.io/squel/): for building SQL query strings.
 
 ## Instalation
 Once you have cloned or forked this repo, just run:
@@ -34,6 +35,47 @@ npm update
 ```
 bower update
 ```
+
+## API REST
+These are the following routes our project contains:
+
+#####USERS
+
+```
+...rest/users/all
+```
+Gets full list of the users
+
+#####GAMES
+
+```
+...rest/games/all
+```
+Gets full list of the games
+
+```
+...rest/games?q=N
+```
+Gets N number of games or a maximum of 15
+
+#####EDITIONS
+
+```
+...rest/editions/all
+```
+Gets full list of the editions
+
+```
+...rest/editions/active
+```
+Get all info of an active edition if there is, otherwise returns an empty object
+#####NEWS
+
+```
+...rest/news?q=N
+```
+Gets N numer of news or a maximum of 15
+
 
 
 

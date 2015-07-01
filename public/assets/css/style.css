@@ -1,0 +1,637 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
+/* GENERAL SETTINGS */
+/* MEDIAS 1200 - 900 - 850 - 750 -640 - 500*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: #ebe6eb;
+  font-family: 'Lato', sans-serif;
+}
+footer {
+  position: relative;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: 100%;
+  width: 100%;
+  height: 450px;
+  /*background-image: url(/static/assets/images/banner.jpg);*/
+  background-color: #2e353f;
+}
+.info-footer {
+  position: absolute;
+  width: 100%;
+  color: white;
+  z-index: 9999;
+  text-align: left;
+  top: 20px;
+  padding: 10px 190px 25px 190px;
+}
+@media all and (max-width: 750px) {
+  .info-footer {
+    text-align: center;
+  }
+}
+.info-footer p,
+.info-footer a {
+  font-size: 1.25em;
+  color: white;
+  text-decoration: none;
+}
+.info-footer a {
+  border-bottom: 1px dashed white;
+}
+@media all and (max-width: 1200px) {
+  .info-footer {
+    padding: 20px;
+  }
+}
+.info-footer input {
+  font-size: 1.1em;
+  min-height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  width: 60%;
+  vertical-align: middle;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 10px;
+  outline: none;
+}
+@media all and (max-width: 500px) {
+  .info-footer input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.info-footer textarea {
+  font-size: 1.1em;
+  max-height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  width: 90%;
+  max-width: 90%;
+  vertical-align: middle;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 10px;
+  margin-top: 10px;
+  outline: none;
+}
+.info-footer .patrocinadores {
+  width: 50%;
+  margin-bottom: 15px;
+}
+.info-footer .patrocinadores a {
+  border: none;
+}
+@media all and (max-width: 900px) {
+  .info-footer .patrocinadores {
+    display: none;
+  }
+}
+.info-footer .round {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+@media all and (max-width: 750px) {
+  .info-footer .contacto {
+    display: none;
+  }
+}
+@media all and (max-width: 750px) {
+  .info-footer .menu {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 500px) {
+  .info-footer .menu {
+    font-size: 0.7em;
+  }
+}
+#home {
+  padding: 10px 190px 25px 190px;
+  font-size: 1.4em;
+  color: #212121;
+}
+@media all and (max-width: 1200px) {
+  #home {
+    padding: 10px 35px 25px 35px;
+  }
+}
+.mybutton {
+  background: none;
+  opacity: 0.6;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.3em;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 0px 20px 1px 20px;
+  outline: none;
+}
+.mybutton:hover,
+.mybutton:active {
+  opacity: 1;
+}
+.mybutton.inverse {
+  background: white;
+  color: #333;
+}
+.mybutton.special {
+  border: 3px solid #106cc8;
+  color: #333;
+  opacity: 0.7;
+}
+.mybutton.alert {
+  color: #ff1f17;
+  border-color: #ff1f17;
+  padding: 0px;
+  min-width: 50px;
+  font-size: 1.3em;
+}
+.mybutton.profile {
+  display: none;
+}
+@media all and (max-width: 640px) {
+  .mybutton.profile {
+    display: inline-block;
+  }
+}
+a {
+  opacity: 0.7;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: 1;
+}
+.a-menu {
+  padding: 6px;
+  border-right: 2px solid white;
+}
+.white {
+  color: white;
+  border-bottom: 1px dashed white;
+}
+.black {
+  color: #212121;
+  border-bottom: 1px dashed #212121;
+}
+.logo {
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 2px;
+  padding: 0;
+  display: inline-block;
+  width: 220px;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.3s;
+  cursor: pointer;
+  line-height: 60px;
+  vertical-align: middle;
+}
+.logo:hover {
+  opacity: 1;
+}
+@media all and (max-width: 640px) {
+  .logo {
+    width: 150px;
+    margin-top: 11px;
+  }
+}
+@media all and (max-width: 400px) {
+  .logo {
+    width: 100px;
+    margin-top: 15px;
+  }
+}
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media all and (max-width: 800px) {
+  header .mybutton {
+    padding: 0px;
+    min-width: 120px;
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 640px) {
+  header .mybutton {
+    padding: 0px;
+    min-width: 60px;
+    margin: 4px;
+  }
+}
+header .right-header {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  padding: 2px;
+  height: 60px;
+  vertical-align: middle;
+}
+header .right-header .hellouser {
+  color: white;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+@media all and (max-width: 640px) {
+  header .right-header .hellouser {
+    display: none;
+  }
+}
+header .right-header .hellouser a {
+  border-bottom: 1px dashed white;
+  color: white;
+}
+header .subheader.visible {
+  opacity: 1;
+  min-height: 75px;
+}
+@media all and (max-width: 850px) {
+  header .subheader.visible {
+    min-height: 120px;
+  }
+}
+@media all and (max-width: 500px) {
+  header .subheader.visible {
+    min-height: 200px;
+  }
+}
+header .subheader {
+  width: 100%;
+  min-height: 0px;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+  overflow: hidden;
+  opacity: 0;
+}
+header .subheader span {
+  color: white;
+  font-size: 1.3em;
+  line-height: 100%;
+  vertical-align: middle;
+}
+header .subheader a {
+  line-height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.4em;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 400;
+  border-bottom: 1px dashed white;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+header .subheader a:hover {
+  opacity: 1;
+}
+header .subheader input {
+  font-size: 1.1em;
+  min-height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 10px;
+  outline: none;
+}
+@media all and (max-width: 500px) {
+  header .subheader input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+header .subheader .mybutton {
+  margin-top: 12px;
+}
+@media all and (max-width: 500px) {
+  header .subheader .mybutton {
+    width: 100%;
+  }
+}
+header .subheader input::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.5;
+}
+@media all and (max-width: 640px) {
+  .hd-span {
+    display: none;
+  }
+}
+.counter1 {
+  font-size: 1.7em;
+  color: white;
+  position: absolute;
+  z-index: 9;
+  left: 40%;
+  top: 10px;
+}
+@media all and (max-width: 900px) {
+  .counter1 {
+    display: none;
+  }
+}
+.banner .bg {
+  position: relative;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: 100%;
+  width: 100%;
+  height: 480px;
+  text-indent: -9999px;
+  background-image: url(/static/assets/images/banner_ld.jpg);
+  background-color: #f45050;
+}
+@media all and (max-width: 640px) {
+  .banner .bg {
+    height: 540px;
+  }
+}
+@media all and (max-width: 500px) {
+  .banner .bg {
+    background-image: none;
+  }
+}
+@media all and (max-width: 400px) {
+  .banner .bg {
+    height: 650px;
+  }
+}
+.banner .info-edicion,
+.banner .info-gamejam {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  text-align: center;
+  top: 150px;
+  padding: 10px 190px 25px 190px;
+}
+@media all and (max-width: 1200px) {
+  .banner .info-edicion,
+  .banner .info-gamejam {
+    padding: 20px;
+  }
+}
+.banner .info-edicion .data-video,
+.banner .info-gamejam .data-video {
+  margin-top: -50px;
+}
+.banner .info-edicion .data-video .video,
+.banner .info-gamejam .data-video .video {
+  position: absolute;
+  height: 100%;
+  border: none;
+  width: 80%;
+}
+@media all and (max-width: 900px) {
+  .banner .info-edicion .data-video,
+  .banner .info-gamejam .data-video {
+    display: none;
+  }
+}
+.banner .info-edicion h2,
+.banner .info-gamejam h2 {
+  color: white;
+  position: absolute;
+  z-index: 9;
+  text-align: left;
+  top: -70px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media all and (max-width: 640px) {
+  .banner .info-edicion h2,
+  .banner .info-gamejam h2 {
+    text-align: center;
+    font-size: 1.3em;
+  }
+}
+.banner .info-edicion div,
+.banner .info-gamejam div {
+  text-align: left;
+  position: relative;
+}
+.banner .info-edicion div ul,
+.banner .info-gamejam div ul {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 2px;
+  width: 100%;
+}
+@media all and (max-width: 1200px) {
+  .banner .info-edicion div ul,
+  .banner .info-gamejam div ul {
+    padding: 0px;
+  }
+}
+@media all and (max-width: 900px) {
+  .banner .info-edicion div ul,
+  .banner .info-gamejam div ul {
+    padding: 0px;
+  }
+}
+.banner .info-edicion div li,
+.banner .info-gamejam div li {
+  display: block;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+@media all and (max-width: 900px) {
+  .banner .info-edicion div li,
+  .banner .info-gamejam div li {
+    padding: 10px;
+  }
+}
+.banner .info-edicion div .mybutton,
+.banner .info-gamejam div .mybutton {
+  width: 45%;
+  font-size: 1.5em;
+  opacity: 0.9;
+}
+@media all and (max-width: 640px) {
+  .banner .info-edicion div .mybutton,
+  .banner .info-gamejam div .mybutton {
+    font-size: 1.3em;
+  }
+}
+@media all and (max-width: 400px) {
+  .banner .info-edicion div .mybutton,
+  .banner .info-gamejam div .mybutton {
+    width: 100%;
+  }
+}
+.banner .info-edicion div .poster,
+.banner .info-gamejam div .poster {
+  margin-left: 100px;
+  max-width: 470px;
+  margin-top: -40px;
+  border: 9px solid black;
+}
+@media all and (max-width: 1200px) {
+  .banner .info-edicion div .poster,
+  .banner .info-gamejam div .poster {
+    max-width: 400px;
+  }
+}
+@media all and (max-width: 1030px) {
+  .banner .info-edicion div .poster,
+  .banner .info-gamejam div .poster {
+    max-width: 350px;
+  }
+}
+.ingamejam {
+  background-color: #f5f5f5;
+  min-height: 200px;
+}
+@media all and (max-width: 400px) {
+  .ingamejam {
+    display: none;
+  }
+}
+.ingamejam .info {
+  padding: 5px;
+  display: inline-block;
+}
+.ingamejam .info img {
+  float: left;
+  max-width: 25%;
+}
+.ingamejam .info div {
+  float: right;
+  width: 70%;
+  padding: 15px;
+}
+.ingamejam .info .mybutton {
+  font-size: 1em;
+  margin-left: 45px;
+}
+.outgamejam {
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+.outgamejam .cards {
+  position: relative;
+  width: 25%;
+  transition: all 0.3s;
+  opacity: 0.8;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  display: inline-block;
+  /*margin: 5px;
+		padding: 0;*/
+}
+.outgamejam .cards:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+@media all and (max-width: 640px) {
+  .outgamejam .cards {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.outgamejam .cards img {
+  height: 150px;
+  overflow: hidden;
+}
+.outgamejam .cards md-card-content {
+  /* height is 50px */
+  text-align: center;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.outgamejam .cards md-card-content h2 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  overflow-x: hidden;
+  font-size: 0.7em;
+  line-height: 40px;
+  text-align: middle;
+}
+.outgamejam h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.more-info {
+  padding-top: 30px;
+}
+.more-info span {
+  font-size: 0.75em;
+  position: absolute;
+  margin-top: -15px;
+}
+.more-info p {
+  padding-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  height: 7500;
+  /* Fallback for non-webkit */
+}
+.more-info .news {
+  margin-bottom: 50px;
+}
+@media all and (max-width: 900px) {
+  .data-poster {
+    display: none;
+  }
+}
+.twitterfeed .inside {
+  width: 95%;
+}
+@media all and (max-width: 850px) {
+  .twitterfeed {
+    display: none;
+  }
+}
+.bubble {
+  padding-right: 15px;
+}

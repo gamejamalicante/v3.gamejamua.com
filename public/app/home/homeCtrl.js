@@ -1,4 +1,4 @@
-gamejamua.controller('homeCtrl', function($scope, $timeout){
+gamejamua.controller('homeCtrl', function($scope, $timeout, $http){
 
 	/* GET STEPS */
 	var steps = [
@@ -34,47 +34,28 @@ gamejamua.controller('homeCtrl', function($scope, $timeout){
 	}
 
 
-	/* GET RANDOM GAMES */
-	var games = [
-		{
-			title: 'Crea tu equipo',			
-			img: '/static/assets/images/equipo.jpg'
-		},
-		{
-			title: 'Revísate las normas',
-			img: '/static/assets/images/normas.jpg'
-		},
-		{
-			title: 'Crea tu juego',
-			img: '/static/assets/images/juego.jpg'
-		},
-		{
-			title: 'Crea tu equipo',			
-			img: '/static/assets/images/equipo.jpg'
-		}];
-	$scope.games = games;
+	/* GET 4 RANDOM GAMES */
+	$http.get('/rest/games?q=4')
+		.success(function(data){
+			$scope.games = data;
+			console.log(data);
+		})
+		.error(function(data){
+			console.log("Error: "+data);
+		});
 
 
-	/* GET NEWS AND ENTRIES */
-	var news = [
-		{
-			title: 'Crea tu equipo',			
-			date: '15 enero, 2015',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-		},
-		{
-			title: 'Revísate las normas',
-			date: '15 abril, 2014',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipiscidjksahdguiashdiosajd sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	/* GET 3 NEWS AND ENTRIES */
+	$http.get('/rest/news?q=3')
+		.success(function(data){
+			$scope.news = data;
+			console.log(data);
+		})
+		.error(function(data){
+			console.log("Error: "+data);
+		});
+	
 
-		},
-		{
-			title: 'Crea tu juego',
-			date: '15 octubre, 2013',
-			text: 'Dut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-
-		}];
-	$scope.news = news;
 
 	/*$timeout(function() {
 	 $.ajax({ url: 'http://platform.twitter.com/widgets.js', dataType: 'script', cache:true});

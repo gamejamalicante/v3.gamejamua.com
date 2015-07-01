@@ -48,9 +48,9 @@
 		<h3 ng-show="!ingamejam">Juegos de otras ediciones - <a class="black" href="#">ver más</a></h3>	
 		<div ng-show="!ingamejam" class="outgamejam" layout="row" layout-sm="column" layout-md="column">
 			<md-card class="cards clickable" ng-repeat="game in games" flex-lg>
-				<img ng-src="{{game.img}}" class="md-card-image" alt="{{game.title}}"/>
+				<img ng-src="{{game.url}}" class="md-card-image" alt="{{game.name}}"/>
 				<md-card-content>
-					<h2 class="md-title"> {{game.title}} </h2>
+					<h2 class="md-title"> {{game.name}} </h2>
 				</md-card-content>
 			</md-card>		
 		</div>	
@@ -74,7 +74,7 @@
 			<div class="news" ng-repeat="new in news">
 				<h2>{{new.title}}</h2>
 				<span>{{new.date}}</span>
-				<div class="bubble"><p>{{new.text}}</p></div>
+				<div class="bubble"><p ng-bind-html-unsafe="new.content">{{new.content}}</p></div>
 				<a class="black" href="#">leer más</a>
 			</div>
 		</div>

@@ -3,6 +3,7 @@ var compression = require('compression'); //COMPRESS DATA FOR FASTER LOADING
 var app = express();
 var http = require('http').Server(app);
 
+
 app.use(compression()); //COMPRIME TODAS LAS PETICIONES
 
 var config = require('./config.js'); //ARCHIVO DE CONFIGURACION GENERICO
@@ -20,6 +21,9 @@ app.use('/rest', rest);
 
 //CARGAMOS LAS RUTAS FIJAS
 require('./routes/rest/users.js')(express, rest);
+require('./routes/rest/news.js')(express, rest);
+require('./routes/rest/games.js')(express, rest);
+require('./routes/rest/editions.js')(express, rest);
 
 //LA RUTA / SIRVE PARA ANGULARJS, TODAS LAS RUTAS DE ANGULAR SE DEFINEN EN public/app/app.js LAS ALTERNATIVAS SE DEFINEN ARRIBA
 app.get('/*',function(req, res){
